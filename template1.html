@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link href="./CSS/Index.css" rel="stylesheet">
+    <link href="./CSS/Layout.css" rel="stylesheet">
+    <script src="./JS/JavaScript.js" defer></script>
+  <style>
+     
+    .container
+    {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 1000px;
+        background: #fff;
+   
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+        box-shadow: 0 35px 55px rgb(26 24 24);
+    }
+    .container .left_Side
+    {
+        position: relative;
+        /* background: #800b0d; */
+        padding: 40px;
+        
+    }
+    .profileText
+    {
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(179, 46, 46, 0.2);
+    }
+    .profileText .imgBx
+    {
+        position:relative;
+        width: 200px;
+        height:200px;
+        border-radius: 50%;
+        overflow:hidden;
+    
+    }
+    .profileText .imgBx img
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .profileText h2
+    {
+        color: rgb(33, 83, 247);
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.4em;
+        border-bottom: 1px solid #000;
+    }
+    .profileText h2 span
+    {
+        color: #000;
+        font-size: 0.8em;
+        font-style: 300;
+    }
+    .contactInfo
+    {
+        padding-top: 40px ;
+    }
+    .title
+    {
+        color: rgb(33, 83, 247);;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000;
+    
+    }
+  
+    .contactInfo ul
+    {
+    display: grid;    
+    position: relative;
+    }
+    .contactInfo ul li
+    {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    display: flex;
+   
+    }
+    .contactInfo ul li .icon
+    {
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: rgb(33, 83, 247);;
+    }
+    .contactInfo ul li span
+    {
+        color: #000;
+        font-weight: 300;
+        padding-left: 8px;
+    }
+    .contactInfo.education li
+    {
+    margin-bottom: 15px;
+    
+    }
+    .contactInfo.education h5
+    {
+        color: rgb(33, 83, 247) !important;
+        font-weight: 500;
+    }
+    .contactInfo.education h4
+    {
+        color: #000;
+        font-weight: 500;
+    }
+    .contactInfo.education h4:nth-child(2)
+    {
+    color: #000;
+    font-weight: 300;
+    }
+    .contactInfo.language .percent
+    {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background: rgb(33, 83, 247);;
+        display: block;
+        margin-top: 5px;
+    }
+    .contactInfo.language .percent div
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        /* background: #620305; */
+    }
+
+
+    .education ul
+    {
+    display: grid;    
+    position: relative;
+    }
+    .education ul li
+    {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    display: flex;
+    flex-direction: column;
+   
+    }
+    .education ul li .icon
+    {
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: rgb(33, 83, 247);;
+    }
+    .education ul li span
+    {
+        color: #000;
+        font-weight: 300;
+        padding-left: 8px;
+    }
+    .education li
+    {
+    margin-bottom: 15px;
+    
+    }
+    .education h5
+    {
+        color: rgb(33, 83, 247) !important;
+        font-weight: 500;
+    }
+   .education h4
+    {
+        color: #000;
+        font-weight: 500;
+    }
+    .education h4:nth-child(2)
+    {
+    color: #000;
+    font-weight: 300;
+    }
+    .education.language .percent
+    {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background: rgb(33, 83, 247);;
+        display: block;
+        margin-top: 5px;
+    }
+    .education.language .percent div
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        /* background: #620305; */
+    }
+
+
+    .container .right_Side
+    {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        overflow: hidden;
+    }
+    .about 
+    {
+        margin-bottom: 50px;
+    
+    }
+    .about:last-child
+    {
+        margin-bottom: 0;
+    }
+    .title2
+    {
+        color:rgb(33, 83, 247);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 10px;
+    }
+    p
+    {
+        color: #000;
+    }
+    .about .box
+    {
+        display:flex ;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+    .about .box .year_company {
+        min-width: 150px;
+        margin-right: 8px;
+    }
+    .about .box .year_company h5
+    {
+        text-transform: uppercase;
+        color: rgb(33, 83, 247);
+        font-weight: 600;
+    }
+    .about .box .text h4{
+        text-transform: uppercase;
+        color: rgb(33, 83, 247);
+        font-size: 16px;
+    }
+    .skills .box
+    {
+        position: relative;
+        width: 100%;
+        display:grid;
+        grid-template-columns: 150px 1fr;
+        justify-content: center;
+    align-items: center;
+    }
+    .skills .box h4
+    {
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 500;
+    
+    }
+    .skills .box .percent
+    {
+        position: relative;
+        width: 100%;
+        height: 10px;
+    background: rgb(181, 195, 236);
+    }
+    .skills .box .percent div 
+    {
+    position: absolute;
+    top: 0;
+    left: 00;
+    height: 100%;
+    background: rgb(33, 83, 247);
+    }
+    .interest ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .interest ul li 
+    {
+        list-style: none;
+        color: #333;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+    .interest ul li .fa 
+    {
+        color: rgb(33, 83, 247);;
+        font-size: 18px;
+        width: 20px;
+    }
+    #flag {
+      width: 100%;
+      height: 56px;
+      box-sizing: content-box;
+      padding-top: 15px;
+      position: relative;
+      background: rgb(33, 83, 247);
+      color: white;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-align: center;
+      top: -39px;
+      left: -38px;
+      text-transform: uppercase;
+    }
+    #flag:after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 13px solid #eee;
+      border-left: 55px solid transparent;
+      border-right: 55px solid transparent;
+    }
+    #flags {
+      position: relative;
+      text-align: center;
+      padding: 12px;
+      margin-bottom: 6px;
+      height: 60px;
+      width: 100%;
+      top: 90px;
+    }
+    #flags:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 51%;
+      background: rgb(33, 83, 247);
+      transform: skew(0deg, 6deg);
+    }
+    #flags:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50%;
+      background: rgb(33, 83, 247);
+      transform: skew(0deg, -6deg);
+    }
+    .widthlan{
+        background: rgb(33, 83, 247) !important;
+    }
+    .percent{
+        background: rgb(128, 154, 238) !important;
+    }
+  </style>    
+</head>
+<body style="background-color: #fff;">
+    <div class="sidecontainer">
+        <div class="left" >
+            <h2>Content</h2>
+            <p>Add entries and adjust the order of sections & entries.</p>
+    
+            <div class="selectlist_section">
+    
+                <div class="selectlist rightmar" id="profile">
+                    <span class="icon">
+                        <i class="fas fa-user-circle"></i>
+                    </span>
+                    <p>Profile</p>
+                </div>
+    
+                <div class="selectlist" id="experience">
+                    <span class="icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </span>
+                    <p>Experience</p>
+                </div>
+    
+                <div class="selectlist rightmar" id="education">
+                    <span class="icon">
+                        <i class="fas fa-book-open"></i>
+                    </span>
+                    <p>Education</p>
+                </div>
+    
+                <div class="selectlist" id="projects">
+                    <span class="icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </span>
+                    <p>Projects</p>
+                </div>
+
+    
+                <div class="selectlist rightmar" id="skills">
+                    <span class="icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </span>
+                    <p>Skills</p>
+                </div>
+    
+                <div class="selectlist" id="language">
+                    <span class="icon">
+                        <i class="fas fa-language"></i>
+                    </span>
+                    <p>Language</p>
+                </div>
+    
+                <div class="selectlist rightmar" id="contact">
+                    <span class="icon">
+                        <i class="fa-solid fa-address-card"></i>
+                    </span>
+                    <p>Contact</p>
+                </div>
+           
+                <button  id="printpage">Print</button>
+            </div>
+        </div>
+        <div class="right"  id="cont" >
+            <!-- <button onclick="printContent('cont')">Print</button> -->
+    
+    
+            <div class="container" >
+                <div class="left_Side">
+                    <div id="flag"></div>
+                    <div class="profileText">
+                        <div class="imgBx">
+                            <img src="./images/Professional.jpg">
+                        </div>
+                        <h2 id="userName"></h2>
+                        <span id="userRole"></span>
+                    </div>
+                    <div class="contactInfo">
+                    <h3 class="title">Contact Info</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <span class="text" id="conPhone"></span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span class="text" id="conEmail"></span>
+                        </li>
+                        <!-- <li>
+                            <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            <span class="text">mywebsite.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                            <span class="text">www.linkedin.com</span>
+                        </li> -->
+                        <li>
+                            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span class="text" id="conAdress"></span>
+                        </li> 
+                    </ul>
+                </div>
+               
+                <div class="about skills">
+                    <h2 class="title">Skills</h2>
+               <div id="skillBox">
+                    <div class="box">
+                    <h4 id="skillName1"></h4>
+                    <div class="percent">
+                    <div style="width:0%;" id="wid1"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+                <div class="education language">
+                    <h3 class="title">LANGUAGES</h3>
+
+                    <ul id="langul">
+                        <li>
+                            <span class="text" id="lang1"></span>
+                            <!-- <span class="percent" id="perc1"></span>
+                            <div style="width: 90%;" id="widlang1"></div> -->
+                            <div class="percent">
+                                <div style="width:0%;" id="widlang1" class="widthlan"></div>
+                        </li>
+               
+                    </ul>
+            </div>
+            </div>
+          <div class="right_Side">
+          <div class="about" >
+            <h2 class="title2">Profile</h2>
+            <p id="profileInfo" style="overflow-wrap: break-word;"></p>
+          </div>
+          <div class="about">
+            <h2 class="title2">Experience</h2>
+            <div id="experBox1" style="overflow-wrap: anywhere;">
+            <div class="box">
+                <div class="year_company">
+        <h5 id="EnploymentDate1"></h5>
+        <h5 id="companyname1" style="overflow-wrap: break-word;"></h5>
+                </div>
+                <div class="text">
+                <h4 id="yourRole1"></h4>
+                <p id="jobDescription1"></p>
+            </div>
+        </div>
+    </div>
+       
+        </div>
+        
+        <div class="education">
+            <h3 class="title2" style="font-size: 900;">EDUCATION</h3>
+            <ul id="edu" style="overflow-wrap: anywhere;">
+                <li>
+                   <h5><span id="startDate1"></span> - <span id="endDate1"></span></h5>
+                   <h4 id="universe1"> </h4>
+                   <h4 id="deg1"> </h4>
+                </li>
+           
+            </ul>
+        </div>
+
+    <div class="about">
+           
+
+        <h2 class="title2">PROJECTS</h2>
+        <div id="projectBox">
+          
+        <div class="box" style="overflow-wrap: anywhere;">
+            <div class="year_company">
+                <h5 id="proTitle1"></h5>
+                <h5 >To:-<span id="proStartDate1"></span>  <br>From:-<span id="proEndDate1"></span></h5>
+                </div>
+                <div class="text">
+                <h4 id="projType1"></h4>
+                <p id="projDescription1"></p>
+        
+            </div>
+     
+    </div>
+
+        </div>
+        
+    </div>
+    <hr>
+       
+        </div>
+            </div>
+           
+                
+            
+        </div>
+    </div>
+    
+   
+
+    <div class="overlay" onclick="off()"></div>
+    <div class="popcontainer" onclick="off()"></div>
+    <div class="popupcollection">
+        <div class="PrintPopup">
+            <div id="printsect">
+                
+            </div>
+            
+            
+            <div class="button">
+               
+                <div class="savebtn" onclick="printContent('cont')"><i class="fas fa-check"></i>Print</div>
+            </div>
+        </div>
+        <div class="popup">
+    
+            <h2>Profile / Summary</h2>
+            <p>Your profile or summary is just a simple paragraph. It's normally used as a quick introduction about yourself.</p>
+    
+            <div class="form" >
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name"><br><br />
+                    <label for="imgFile">Upload Your Image</label><br>
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" id="imgFile" ><br><br />
+                 
+                </div>
+                <div>
+                    <label for="role">Role</label><br>
+                    <input type="text" id="role"><br><br />
+                  
+                </div>
+           
+            </div>
+
+            <h6>Your Profile</h6>
+            <textarea id="profTextArea"></textarea>
+    
+            
+            <div class="button">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('profile')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+    
+        <div class="experiencePopup">
+    
+            <h2>Experience</h2>
+            <div id="experienceform">
+                
+       <div class="expform">
+            <div class="form" >
+                <div>
+                    <label for="JobTitle1">Job Title</label><br>
+                    <input type="text" id="JobTitle1" ><br><br />
+                    <label for="Employer1">Employer or Company</label><br>
+                    <input type="text" id="Employer1" ><br><br />
+                </div>
+                <div>
+                    <label for="StartDates1">Employment Starting Dates</label><br>
+                    <input type="date" id="StartDates1" ><br><br />
+                    <label for="EndDates1">Employment Ending Dates</label><br>
+                    <input type="date" id="EndDates1" ><br><br />
+                </div>
+           
+            </div>
+            <label for="JobDescr1">Job Description</label>
+            <textarea id="JobDescr1"></textarea>
+       
+    </div>
+</div>
+    <div class="button">
+        <div class="savebtn" onclick="AddItems('experience')" ><i class="fas fa-plus"></i>Add Items</div>
+        
+    </div>
+            <div class="button" id="addSavebtn">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('experience')" id="saveexpbtn"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+         
+       
+    </div>
+
+        <div class="educationpop">
+    
+            <h2>Education</h2>
+            
+                <div id="educBox">
+                    <div class="form">
+                <div>
+                    <label for="Degree1">Degree</label><br>
+                    <input type="text" id="Degree1" ><br><br />
+                    <label for="Starting1">Starting Year</label><br>
+                    <input type="date" id="Starting1" ><br><br />
+                </div>
+                <div>
+                    <label for="University1">School or University</label><br>
+                    <input type="text" id="University1" name="Dates" value=""><br><br />
+                    <label for="Ending1">Ending Year</label><br>
+                    <input type="date" id="Ending1" ><br><br />
+                </div>
+            </div>
+            </div>
+            <!-- <label for="honours">Description,honours,etc</label>
+            <textarea id="honours"></textarea> -->
+            <div class="button">
+            <div class="savebtn" onclick="AddItems('education')" ><i class="fas fa-plus"></i>Add Items</div>
+            
+        </div>
+            <div class="button">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('education')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+    
+        <div class="projectpop">
+            <div id="ProjForm">
+            <h2>Projects</h2>
+            
+            <div class="form">
+                <div>
+                    <label for="ProjectTitle1">Project Title</label><br>
+                    <input type="text" id="ProjectTitle1" ><br><br />
+                    <label for="Project1">Project Starting Date </label><br>
+                    <input type="date" id="Project1" ><br><br />
+                </div>
+                <div>
+                    <label for="ProjectDate1">Project type</label><br>
+                    <input type="text" id="ProjectDate1" ><br><br />
+                    <label for="Purpose1">Project Ending Date</label><br>
+                    <input type="date" id="Purpose1" ><br><br />
+                </div>
+            </div>
+            <label for="ProjectDescr1">Project Description</label>
+            <textarea id="ProjectDescr1"></textarea>
+        </div>
+    
+            <div class="button">
+                
+                <div class="savebtn" onclick="AddItems('project')" ><i class="fas fa-plus"></i>Add Items</div>
+            </div>
+            <div class="button">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('project')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+        
+         <div class="skillpop">
+  
+            <h2>Skills</h2>
+            <div id="skill">
+            <div class="form">
+                <div>
+                    <label for="Skillname1">Skill</label><br>
+                    <input type="text" id="Skillname1"><br><br />
+    
+                </div>
+                <div>
+                    <label for="skillLevel1">Level %</label><br>
+                    <input type="number" id="skillLevel1" name="Dates" value=""><br><br />
+    
+                </div>
+            </div>
+        </div>
+
+            <div class="button" style="padding-bottom: 10px;">
+                <div class="savebtn" onclick="AddItems('skill')" ><i class="fas fa-plus"></i>Add Items</div>
+                
+            </div>
+            <div class="button" style="margin-top:0px;">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('Skill')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+   
+     <div class="languagepop">
+    
+            <h2>Languages</h2>
+            <p>For your skill level, use terms like elementary, conversational, native, full working proficiency, etc.</p>
+           <div id="langBox">
+            <div class="form">
+                <div>
+                    <label for="Language">Language</label><br>
+                    <input type="text" id="Language1"><br><br />
+    
+                </div>
+                <div>
+                    <label for="LangSkillLevel">Skill Level</label><br>
+                    <input type="number" id="LangSkillLevel1" name="Dates" value=""><br><br />
+    
+                </div>
+            </div>
+        </div>
+            <div class="button" style="padding-bottom: 10px;">
+                <div class="savebtn" onclick="AddItems('language')" ><i class="fas fa-plus"></i>Add Items</div>
+                
+            </div>
+    
+            <div class="button" style="margin-top:0px;">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('language')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+    
+
+        <div class="contactpop" >
+    
+            <h2>Contact</h2>
+            
+                <div id="contactBox">
+                    <div class="form">
+                <div>
+                    <label for="Phone">Phone</label><br>
+                    <input type="number" id="Phone" ><br><br />
+                    <label for="Email">Email</label><br>
+                    <input type="email" id="Email"><br><br />
+                </div>
+                <div>
+                    <label for="Address">Address</label><br>
+                    <input type="text" id="Address" name="Dates" value=""><br><br />
+                   
+                </div>
+            </div>
+            </div>
+            <!-- <label for="honours">Description,honours,etc</label>
+            <textarea id="honours"></textarea> -->
+         
+            <div class="button">
+                <div class="closebtn" onclick="closepop()"><i class="fas fa-times"></i> Cancel</div>
+                <div class="savebtn" onclick="startfun('contact')"><i class="fas fa-check"></i>Save Item</div>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>
